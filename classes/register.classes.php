@@ -1,53 +1,53 @@
 <?php
-// use PHPMailer\PHPMailer\PHPMailer;
-// use PHPMailer\PHPMailer\SMTP;
-// use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
 class Register extends Dbh
 {
-    // protected function sendEmail($name, $email, $level)
-    // {
-    //     // Load Composer's autoloader
-    //     require '../vendor/autoload.php';
+    protected function sendEmail($name, $email, $level)
+    {
+        // Load Composer's autoloader
+        require '../vendor/autoload.php';
 
-    //     try {
-    //         $mail = new PHPMailer(true);
-    //         $mail->SMTPDebug = SMTP::DEBUG_SERVER; // Enable verbose debug output
-    //         $mail->isSMTP(); // Send using SMTP
-    //         $mail->Host       = 'smtp.gmail.com'; // Set the SMTP server to send through
-    //         $mail->SMTPAuth   = true; // Enable SMTP authentication
-    //         $mail->Username   = 'joshuaadeyemi445@gmail.com'; // SMTP username
-    //         $mail->Password   = 'yrkddeezyduwkodd'; // App-specific password
-    //         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Enable implicit TLS encryption
-    //         $mail->Port       = 465; // TCP port to connect to
+        try {
+            $mail = new PHPMailer(true);
+            $mail->SMTPDebug = SMTP::DEBUG_SERVER; // Enable verbose debug output
+            $mail->isSMTP(); // Send using SMTP
+            $mail->Host       = 'smtp.gmail.com'; // Set the SMTP server to send through
+            $mail->SMTPAuth   = true; // Enable SMTP authentication
+            $mail->Username   = 'joshuaadeyemi445@gmail.com'; // SMTP username
+            $mail->Password   = 'yrkddeezyduwkodd'; // App-specific password
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Enable implicit TLS encryption
+            $mail->Port       = 465; // TCP port to connect to
  
-    //         //Recipients
-    //         $mail->setFrom('joshuaadeyemi445@gmail.com', 'YOUCARE'); // Fixed sender name
-    //         $mail->addAddress($email);
+            //Recipients
+            $mail->setFrom('joshuaadeyemi445@gmail.com', 'YOUCARE'); // Fixed sender name
+            $mail->addAddress($email);
 
-    //         //Content
-    //         $mail->isHTML(true); // Set email format to HTML
-    //         $mail->Subject = 'YOUCARE Registration';
-    //         $email_template  = "<strong>Dear ". $name ."!</strong><br/>"
-    //                          . "<p>Your Registration has been Successful:</p>"
-    //                          . "<p>Your Level: " . $level . "</p>"
-    //                          . "<p>Thank you!</p>"
-    //                          . "<br/><b>RECTEM COM SCI Team</b>";
-    //         $mail->Body = $email_template;
+            //Content
+            $mail->isHTML(true); // Set email format to HTML
+            $mail->Subject = 'YOUCARE Registration';
+            $email_template  = "<strong>Dear ". $name ."!</strong><br/>"
+                             . "<p>Your Registration has been Successful:</p>"
+                             . "<p>Your Level: " . $level . "</p>"
+                             . "<p>Thank you!</p>"
+                             . "<br/><b>RECTEM COM SCI Team</b>";
+            $mail->Body = $email_template;
 
-    //         // Attempt to send the email
-    //         if ($mail->send()) {
-    //             header("location: ../login.php?status=emailsent");
-    //             exit();
-    //         } else {
-    //             header("location: ../login.php?status=sentemailfailed&error=" . urlencode($mail->ErrorInfo));
-    //             exit();
-    //         }
-    //     } catch (Exception $e) {
-    //         header("location: ../login.php?status=sentemailfailed&error=" . urlencode($e->getMessage()));
-    //         exit();
-    //     }
-    // }
+            // Attempt to send the email
+            if ($mail->send()) {
+                header("location: ../login.php?status=emailsent");
+                exit();
+            } else {
+                header("location: ../login.php?status=sentemailfailed&error=" . urlencode($mail->ErrorInfo));
+                exit();
+            }
+        } catch (Exception $e) {
+            header("location: ../login.php?status=sentemailfailed&error=" . urlencode($e->getMessage()));
+            exit();
+        }
+    }
 
     protected function setUser($name, $email, $matricno, $level, $department, $password)
     {
