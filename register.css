@@ -1,0 +1,70 @@
+/* Style for the entire page */
+body {
+    font: bolder;
+    font-family: sans-serif; /* Set the main font */
+    background-color: #863df2; /* Light grey background */
+    margin: 0; /* Remove default margin */
+    padding: 20px; /* Add some space around the edges */
+    
+}
+
+/* Style for the main container */
+.container {
+    max-width: 400px; /* Set maximum width */
+    margin: 0 auto; /* Center the container */
+    background-color: #292244; /* White background */
+    padding: 20px; /* Add space inside the container */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Add a subtle shadow */
+}
+
+/* Style for the main heading */
+h2 {
+    margin-top: 10px;
+    margin-bottom: 20px; /* Space below the heading */
+    text-align: center; /* Center the text */
+    color: #fff; /* Dark grey color */
+}
+
+/* Style for each form group (label + input) */
+.form-group {
+    margin-bottom: 15px; /* Add space below each group */
+}
+
+/* Style for labels */
+label {
+    display: block; /* Put label on its own line */
+    margin-bottom: 5px; /* Add a little space below the label */
+    color: #fff; /* Medium grey color */
+}
+ 
+/* Style for text inputs, email input, password input, and select dropdown */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    font-family: sans-serif;
+    width: 100%; /* Make the input take up full width */
+    padding: 8px; /* Add some inner space */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 4px; /* Slightly rounded corners */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+    font-size: large;
+    font-family: sans-serif;
+    width: 100%; /* Full width button */
+    padding: 10px; /* Add some height to the button */
+    background-color: #3a2688; 
+    color: #fff; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to hand icon on hover */
+}
+
+/* Style for submit button on hover */
+input[type="submit"]:hover {
+    background-color: #863DF2;
+}

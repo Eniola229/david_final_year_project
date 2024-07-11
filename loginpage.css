@@ -1,0 +1,67 @@
+/* Set the default font and background color for the body */
+body {
+    font-family: Arial, sans-serif; /* Font style for the text */
+    background-color: #863DF2;
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+    color: #fff;
+    font-family: Arial;
+    font-size: larger;
+}
+
+/* Styles for the login container div */
+.login-container {
+    background-color: #292244; 
+    padding: 20px; /* Padding inside the container */
+    border-radius: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    width: 20%; 
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+
+}
+
+/* Styles for the heading inside the login container */
+.login-container h2 {
+    margin-top: 20px;
+    margin-bottom: 30px; /* Space below the heading */
+    text-align: center; /* Center align the heading text */
+}
+
+/* Styles for the label elements */
+.login-container label {
+    display: block; /* Make labels block elements */
+    margin-bottom: 5px; /* Space below the labels */
+}
+
+/* Styles for the input fields */
+.login-container input {
+    width: 93.5%; /* Full width of the container */
+    padding: 8px; /* Padding inside the input field */
+    margin-bottom: 10px; /* Space below each input field */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 3px; /* Slightly rounded corners */
+}
+
+/* Styles for the submit button */
+.login-container button {
+    border-radius: 10px;
+    font-size: large;
+    width: 100%; /* Full width of the container */
+    padding: 10px; /* Padding inside the button */
+    background-color: #3a2688;
+    border: none; /* Remove default border */
+    color: white; /* White text color */
+    border-radius: 3px; /* Slightly rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Hover effect for the submit button */
+.login-container button:hover {
+    background-color: #863DF2;
+}

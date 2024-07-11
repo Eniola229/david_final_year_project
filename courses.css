@@ -1,0 +1,144 @@
+/* Import Google Fonts 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #863DF2;
+    color: #333;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #292244;
+    z-index: 1000;
+    position: sticky; /* Make the navbar stick to the top */
+    top: 0; /* Stick to the top */
+    cursor: pointer;
+    color: #fff; /* White text color */
+    padding: 1em 0; /* Padding at the top and bottom */
+    animation: slideDown 1s ease-in-out; /* Slide down animation when the page loads */
+}
+
+/* Keyframes for the slide down animation */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%); /* Start from above the page */
+    }
+    to {
+        transform: translateY(0); /* End at the normal position */
+    }
+}
+
+.navbar-container {
+    font-size: 1.2em;
+    display: flex; /* Arrange items in a row */
+    justify-content: space-between; /* Space out items evenly */
+    align-items: center; /* Center items vertically */
+    max-width: 1200px; /* Max width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 1em; /* Padding on the left and right */
+}
+
+.logo {
+    font-size: 1.8em;
+    color: #fff;
+    animation: fadeIn 2s ease-in-out; /* Fade in animation when the page loads */
+}
+
+/* Keyframes for the fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with invisible */
+    }
+    to {
+        opacity: 1; /* End with fully visible */
+    }
+}
+
+.navbar-links a {
+    font-size: 1em;
+    color: #fff; /* White text color */
+    padding: 14px 20px; /* Padding inside the links */
+    text-decoration: none; /* Remove underline from the links */
+    display: inline-block; /* Make links behave like inline blocks */
+    animation: bounceIn 1.5s ease-in-out; /* Bounce in animation when the page loads */
+    transition: 1s ease;
+}
+
+/* Keyframes for the bounce in animation */
+@keyframes bounceIn {
+    from {
+        transform: scale(0.5); /* Start smaller */
+    }
+    to {
+        transform: scale(1); /* End at normal size */
+    }
+}
+
+.navbar-links a:hover {
+    transform: translateY(-5px);
+}
+
+/* Courses section styling */
+.courses {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.courses h2 {
+    color: #fff;
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.course-item {
+    border-width: 1px;
+    background-color: #292244;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.course-item a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+}
+
+/* .course-item:hover {
+    transform: translateY(-5px);
+} */
+
+/* Footer styling */
+.footer {
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #863DF2;
+    color: #fff; /* White text color */
+    text-align: center; /* Center the text */
+    padding: 0.5em 0; /* Padding at the top and bottom */
+    animation: zoomIn 1s ease-in-out;
+}
+
+/* Keyframes for the zoom in animation */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8); /* Start smaller */
+    }
+    to {
+        transform: scale(1); /* End at normal size */
+    }
+}
