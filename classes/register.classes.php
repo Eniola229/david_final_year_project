@@ -35,7 +35,7 @@ class Register extends Dbh
                              . "<br/><b>RECTEM COM SCI Team</b>";
             $mail->Body = $email_template;
 
-            // Attempt to send the email
+            // Attempt to send the email 
             if ($mail->send()) {
                 header("location: ../login.php?status=emailsent");
                 exit();

@@ -54,7 +54,7 @@ class RegisterContr extends Register
         );
 
         // Send confirmation email
-       // $this->sendEmail($this->name, $this->email, $this->level);
+        $this->sendEmail($this->name, $this->email, $this->level);
     }
 
     private function emptyInput() {

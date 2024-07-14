@@ -10,3 +10,6 @@
     }
 
         include "./classes/viewcourses.classes.php";
+        include "./classes/viewusers_admin.classes.php";
+        include "./classes/viewtimetable.classes.php";
+        include "./classes/viewtimetable_ND2.classes.php";

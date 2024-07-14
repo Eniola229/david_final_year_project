@@ -16,23 +16,63 @@
             <section id="timetable" class="timetable">
                 <!-- Table to display the timetable -->
                 <div class="container" id="course1">
-        <h1>Course Table For ND1</h1>
-        <table>
+        <h1>TIME TABLE</h1>
+        <div class="container" id="course1">
+        <h4>Time Table For ND1</h4>
+        <table class="table">
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>Course Name</th>
-                    <th>Course Code</th>
-                    <th>Lecturer</th>
+                    <th>Level</th>
+                    <th>PDF</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-               <td>Hiii</td>
-               <td>Hiii</td>
-               <td>Hiii</td>
-               <td>Hiii</td>
+               <?php foreach($timetableLists as $timetable): ?>
+                <tr>
+                  <th scope="row">#</th>
+                  <th ><?php echo htmlspecialchars($timetable['level']); ?></th>
+                  <th ><iframe src="./timetable_uploads/<?php echo htmlspecialchars($timetable['file_path']); ?>"  style="width:200px; height:60px;" frameborder="0"></iframe></th>
+                  <th >
+                    <a href="./timetable_uploads/<?php echo htmlspecialchars($timetable['file_path']); ?>" Download>
+                    <button style="background: blue; color: white; border: none; height: 50px; width: 100px; cursor: pointer; border-radius: 5px; font-weight: bolder;" class="btn btn-danger">Download</button>
+                </a>
+                </th>
+                </tr>
+                <?php endforeach; ?>
             </tbody>
         </table>
+
+         <h4>TableTable For ND2</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Level</th>
+                    <th>PDF</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+               <?php foreach($timetableLists_ND2 as $timetable_ND2): ?>
+                <tr>
+                  <th scope="row">#</th>
+                  <th ><?php echo htmlspecialchars($timetable_ND2['course_code']); ?></th>
+                  <th ><iframe src="./material_uploads/<?php echo htmlspecialchars($timetable_ND2['file_path']); ?>"  style="width:200px; height:60px;" frameborder="0"></iframe></th>
+                  <th >
+                    <a href="./timetable_uploads/<?php echo htmlspecialchars($timetable_ND2['file_path']); ?>" Download>
+                    <button style="background: blue; color: white; border: none; height: 50px; width: 100px; cursor: pointer; border-radius: 5px; font-weight: bolder;" class="btn btn-danger">Download</button>
+                </a>
+                </th>
+                </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+
+    </div>
+
+  </div>
     </div>
             </section>
           

@@ -45,21 +45,22 @@
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Username</th>
+          <th scope="col">Full Name</th>
           <th scope="col">Email</th>
-          <th scope="col">Actions</th>
+          <th scope="col">Matric No</th>
+          <th scope="col">Level</th>
         </tr>
       </thead>
       <tbody>
+         <?php foreach($usersLists as $user): ?>
         <tr>
           <th scope="row">1</th>
-          <td>User 1</td>
-          <td>user1@example.com</td>
-          <td>
-            <button class="btn btn-warning btn-sm">Edit</button>
-            <button class="btn btn-danger btn-sm">Delete</button>
-          </td>
+          <td><?php echo htmlspecialchars($user['name']); ?></td>
+          <td><?php echo htmlspecialchars($user['email']); ?></td>
+          <td><?php echo htmlspecialchars($user['matricno']); ?></td>
+          <td><?php echo htmlspecialchars($user['level']); ?></td>
         </tr>
+         <?php endforeach; ?>
       </tbody>
     </table>
   </div>

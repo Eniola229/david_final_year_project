@@ -8,3 +8,7 @@ include "./classes/viewcourses_public_2.classes.php";
 
 include "./classes/viewmaterial_public.classes.php";
 include "./classes/viewmaterial_public_ND2.classes.php";
+
+
+ include "./classes/viewtimetable.classes.php";
+ include "./classes/viewtimetable_ND2.classes.php";

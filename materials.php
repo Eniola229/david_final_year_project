@@ -53,7 +53,7 @@
             <tbody>
                <?php foreach($materialsLists as $material): ?>
                 <tr>
-                  <th scope="row"><?php echo htmlspecialchars($material['id']); ?></th>
+                  <th scope="row">#</th>
                   <th ><?php echo htmlspecialchars($material['course_code']); ?></th>
                   <th ><iframe src="./material_uploads/<?php echo htmlspecialchars($material['file_path']); ?>"  style="width:200px; height:60px;" frameborder="0"></iframe></th>
                   <th >
@@ -73,15 +73,15 @@
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>Course Name</th>
                     <th>Course Code</th>
-                    <th>Lecturer</th>
+                    <th>PDF</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
                <?php foreach($materialsLists_ND2 as $material_ND2): ?>
                 <tr>
-                  <th scope="row"><?php echo htmlspecialchars($material_ND2['id']); ?></th>
+                  <th scope="row">#</th>
                   <th ><?php echo htmlspecialchars($material_ND2['course_code']); ?></th>
                   <th ><iframe src="./material_uploads/<?php echo htmlspecialchars($material_ND2['file_path']); ?>"  style="width:200px; height:60px;" frameborder="0"></iframe></th>
                   <th >
